@@ -1,4 +1,4 @@
-## Lab 2 - Spring MVC, Dependency injection
+## Lab 2 - REST, Spring Boot, Dependency injection
 
 ### REST
 
