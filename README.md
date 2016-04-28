@@ -48,18 +48,20 @@ potreban samo njegov URL za vršenje CRUD operacija preko različitih HTTP metod
 
 ![Spring REST](http://46.4.82.177/kursimages/rest.svg)
 
+* Napraviti paket `jwd.wafepa.web.controller`
+* Napraviti klasu `ApiActivityController` u paketu `jwts.wafepa.web.controller`
+* Mapirati je na URL `api/activities` korišćenjem `@RequestMapping` anotacije
 
-
+---------------------------------------
 * [Dependency Injection](http://igordejanovic.net/courses/tech/DependencyInjection.html#/) je softverski obrazac koji se koristi kako bi se olakšalo instanciranje objekata. Postoje mnoge implementacije koje se mogu koristiti nezavisno od Spring-a. U okviru Spring Framework-a, DI se koristi kako bi se dobila referenca na neku komponentu
-
 * Da bi Spring Dependency Injecion radio, potrebno je uključiti component-scan mehanizam. U Spring Boot, ovo podešavanje je deo anotacije `@SpringBootApplication` koju smo već primenili. 
 
 * Anotirati `InMemoryActivityService` kao `@Service`
-* Napraviti paket `jwd.wafepa.web.controller`
-* Napraviti `ApiActivityController` klasu u paketu `jwts.wafepa.web.controller`
-* Anotirati klasu sa `@RestController` i mapirati je na URL `api/activities` korišćenjem `@RequestMapping` anotacije
+
+* Anotirati klasu `ApiActivityController` sa `@RestController`
 * Injektovati `ActivityService` u `ApiActivityController` korišćenjem `@Autowired` anotacije
-* Implementirati CRUD operacije za aktivnosti prateći REST princip.
+---------------------------------------
+
 
 * Kako bi se podaci (objekti) koje vraća/prihvata REST web servis serijalizovali u JSON objekte,
 potrebno je dodati dependency za Jackson mapper (koji mapira Java objekte na JSON, i obrnuto):
@@ -83,9 +85,10 @@ potrebno je dodati dependency za Jackson mapper (koji mapira Java objekte na JSO
 </dependency>
 ```
 
-* Testirati napravljeni REST web servis u web browseru.
+* Implementirati CRUD operacije za aktivnosti prateći REST princip.
+* Testirati napravljeni REST web servis (koristiti plug-in RESTClient).
 
-
+---------------------------------------
 ### Domaći zadatak
 Po uzoru na aktivnosti, dodati mogućnost evidencije korisnika:
 
