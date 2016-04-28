@@ -46,7 +46,7 @@ potreban samo njegov URL za vršenje CRUD operacija preko različitih HTTP metod
 
 ### Servisi i kontroleri
 
-![Spring REST](http://46.4.82.177/kursimages/rest.svg)
+![Spring REST](http://46.4.82.177/kursimages/spring_rest.svg)
 
 * Napraviti paket `jwd.wafepa.web.controller`
 * Napraviti klasu `ApiActivityController` u paketu `jwts.wafepa.web.controller`
