@@ -60,6 +60,7 @@ potreban samo njegov URL za vršenje CRUD operacija preko različitih HTTP metod
 
 * Anotirati klasu `ApiActivityController` sa `@RestController`
 * Injektovati `ActivityService` u `ApiActivityController` korišćenjem `@Autowired` anotacije
+
 ---------------------------------------
 
 
