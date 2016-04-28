@@ -1,5 +1,32 @@
 ## Lab 2 - Spring MVC, Dependency injection
 
+### REST
+
+----
+
+REST web servis (često nazivan i REST Web API) je web servis implementiran korišćenjem HTTP protokola i REST (*Representation State Transfer*) principa - [What is REST](http://martinfowler.com/articles/richardsonMaturityModel.html).
+REST web servis predstavlja kolekciju **resursa**. Resursima manipulišemo korišćenjem [metoda](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) koje definiše HTTP protokol:
+
+- GET
+- POST
+- PUT
+- DELETE
+
+Korišćenjem ovih metoda API (web servis) se dizajnira tako da je za svaki entitet (resurs)
+potreban samo njegov URL za vršenje CRUD operacija preko različitih HTTP metoda:
+- ako se traži kolekcija resursa: /activities
+- ako se traži konkretan resurs: /activities/{id}, gde id predstavlja identifikator resursa
+
+| Resurs                                      | GET                                                                           | PUT                                                                | POST                                                                                                      | DELETE                 |
+|---------------------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|------------------------|
+| Kolekcija http://example.com/resources      | Listaj URI-je i eventualno druge detalja o svim članovima kolekcije.          | Zameni celu kolekciju drugom kolekcijom.                           | Dodaj novog člana kolekcije. URI ovog člana se obično generiše automatski i vraća kao rezultat operacije. | Obriši celu kolekciju. |
+| Element http://example.com/resources/item17 | Dobavi traženi element kolekcije u obliku koji je naveden u header-u zahteva. | Zameni navedeni član kolekcije, a ukoliko ne postoji kreiraj novi. | Obično se ne koristi.                                                                                     |Obriši element         |
+
+![REST API](http://46.4.82.177/kursimages/rest_api.svg)
+
+----
+
+
 ### Spring Boot
 
 [Spring Boot](http://projects.spring.io/spring-boot/) se koristi kako bi se pojednostavila konfiguracija Spring projekata. Umesto XML konfiguracionih fajlova, koriste se anotacije u Java klasama. Takođe, na osnovu biblioteka raspoloživih na class path-u, Spring Boot automatski postavlja podrazumevanu konfiguraciju za svaku od njih. Ova konfiguracija se po potrebi može menjati. 
